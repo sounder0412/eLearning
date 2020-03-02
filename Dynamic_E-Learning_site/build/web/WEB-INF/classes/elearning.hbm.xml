@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="DTO.Branch_DTO" table="Branch">
+        <id name="b_id">
+            <generator class="increment" />
+        </id>
+        <property name="b_name" />
+        <property name="b_desc" />
+    </class>
+    <class name="DTO.Faculty_Registration_DTO" table="Faculty">
+        <id name="f_id">
+            <generator class="increment" />
+        </id>
+        <property name="username" />
+        <property name="fullname" />
+        <property name="email" />
+        <property name="password" />
+        <property name="phone" />
+    </class>
+    <class name="DTO.Student_Registration_DTO" table="Student">
+        <id name="s_id">
+            <generator class="increment" />
+        </id>
+        <property name="username" />
+        <property name="fullname" />
+        <property name="email" />
+        <property name="password" />
+        <property name="phone" />
+    </class>
+    <class name="DTO.Videos_Lectures_DTO" table="Videos">
+        <id name="v_id">
+            <generator class="increment" />
+        </id>
+        <property name="b_id" />
+        <property name="sb_id" />
+        <property name="l_topic" />
+        <property name="v_desc" />
+        <property name="t_name" />
+        <property name="v_file" />
+    </class>
+    <class name="DTO.Subject_DTO" table="Subject">
+        <id name="sb_id">
+            <generator class="increment" />
+        </id>
+        <property name="b_id" />
+        <property name="s_name" />
+        <property name="semester" />
+    </class>
+    <class name="DTO.Notes_DTO" table="Notes">
+        <id name="n_id">
+            <generator class="increment" />
+        </id>
+        <property name="b_id" />
+        <property name="sb_id" />
+        <property name="notes_desc" />
+        <property name="notes_by" />
+        <property name="notes_file" />
+    </class>
+    <class name="DTO.Question_Paper_DTO" table="Question_Paper">
+        <id name="qp_id">
+            <generator class="increment" />
+        </id>
+        <property name="b_id" />
+        <property name="sb_id" />
+        <property name="year"/>
+        <property name="qp_file" />
+    </class>
+    <class name="DTO.Tutorials_DTO" table="Tutorials">
+        <id name="t_id">
+            <generator class="increment" />
+        </id>
+        <property name="b_id" />
+        <property name="sb_id" />
+        <property name="t_topic" />
+        <property name="t_by" />
+        <property name="t_desc" />
+        <property name="t_file" />
+    </class>    
+</hibernate-mapping>
